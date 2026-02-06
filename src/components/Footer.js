@@ -12,7 +12,7 @@ const Footer = () => {
             <div className="footer-section">
               <div className="footer-brand">
                 <div className="footer-logo">KS</div>
-                <h3>Kelvin Chwara</h3>
+                <h3>Kelvin Chwara SagiNi</h3>
                 <p>IT Student & Developer</p>
               </div>
               <p className="footer-description">
@@ -72,7 +72,7 @@ const Footer = () => {
               </div>
               <div className="footer-actions">
                 <a href="#contact" className="btn btn-primary">Get In Touch</a>
-                <a href="/KELVIN.pdf" download className="btn btn-secondary">Download CV</a>
+                <a href="/KELVIN%20CHWARA.pdf" download className="btn btn-secondary">Download CV</a>
               </div>
             </div>
           </div>
@@ -83,12 +83,12 @@ const Footer = () => {
         <div className="container">
           <div className="footer-bottom-content">
             <p className="copyright">
-              © {currentYear} Kelvin Sagini. All rights reserved.
+              © {currentYear} Kelvin Chwara SagiNi. All rights reserved.
             </p>
             <div className="footer-links">
-              <a href="#">Privacy Policy</a>
-              <a href="#">Terms of Service</a>
-              <a href="#">Sitemap</a>
+              <a href="/privacy">Privacy Policy</a>
+              <a href="/terms">Terms of Service</a>
+              <a href="/sitemap">Sitemap</a>
             </div>
           </div>
         </div>

@@ -28,7 +28,7 @@ const About = () => {
               <div className="info-grid">
                 <div className="info-item">
                   <span className="info-label">Full Name</span>
-                  <span className="info-value">Kelvin Chwara</span>
+                  <span className="info-value">Kelvin Chwara SagiNi</span>
                 </div>
                 <div className="info-item">
                   <span className="info-label">Location</span>
@@ -43,10 +43,6 @@ const About = () => {
                   <span className="info-value">+254 757 450 768</span>
                 </div>
                 <div className="info-item">
-                  <span className="info-label">Age</span>
-                  <span className="info-value">22 Years</span>
-                </div>
-                <div className="info-item">
                   <span className="info-label">Status</span>
                   <span className="info-value">IT Student & Developer</span>
                 </div>
@@ -56,7 +52,7 @@ const About = () => {
             <div className="about-cta">
               <Link to="/contact" className="btn btn-primary">Contact Me</Link>
               <Link to="/experience" className="btn btn-outline">View Experience</Link>
-              <a href="/KELVIN.pdf" download className="btn btn-secondary download-btn">
+              <a href="/KELVIN%20CHWARA.pdf" download className="btn btn-secondary download-btn">
                 <span>📄 Download CV</span>
               </a>
             </div>
@@ -66,11 +62,9 @@ const About = () => {
             <div className="career-objective">
               <h3>Career Objective</h3>
               <p>
-                IT student seeking an industrial attachment to apply web 
-                development skills and gain practical experience in a dynamic 
-                organization. I am eager to contribute to meaningful projects 
-                while learning from experienced professionals in the technology 
-                industry.
+                Seeking intern and job opportunities to apply my IT knowledge in real-world environments. 
+                Passionate about contributing to meaningful projects while growing my technical skills 
+                in web development, networking, and system administration.
               </p>
             </div>
 
@@ -78,24 +72,24 @@ const About = () => {
               <h3>Current Focus Areas</h3>
               <div className="focus-list">
                 <div className="focus-item">
-                  <span className="focus-icon">🎯</span>
+                  <span className="focus-icon">💼</span>
                   <div>
-                    <h4>Industrial Attachment</h4>
-                    <p>Seeking opportunities to apply theoretical knowledge in practical settings</p>
+                    <h4>Seeking Intern/Job Opportunities</h4>
+                    <p>Ready to contribute to professional teams and grow my practical IT skills</p>
                   </div>
                 </div>
                 <div className="focus-item">
                   <span className="focus-icon">💻</span>
                   <div>
                     <h4>Full-Stack Development</h4>
-                    <p>Expanding expertise in modern web technologies and frameworks</p>
+                    <p>Building web applications with modern frameworks and technologies</p>
                   </div>
                 </div>
                 <div className="focus-item">
                   <span className="focus-icon">🌐</span>
                   <div>
                     <h4>Network Administration</h4>
-                    <p>Building skills in network configuration and security</p>
+                    <p>Configuring networks, system administration, and IT infrastructure</p>
                   </div>
                 </div>
               </div>

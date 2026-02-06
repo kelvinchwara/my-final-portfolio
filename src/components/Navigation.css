@@ -82,7 +82,7 @@
 
 /* Desktop Navigation */
 .nav-links {
-  display: flex;
+  display: none;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -130,14 +130,13 @@
 
 /* CTA Button */
 .nav-cta {
+  display: none;
   background: var(--gradient-primary);
   color: white;
   padding: 0.625rem 1.25rem;
   border-radius: var(--radius-lg);
   font-weight: var(--font-semibold);
   text-decoration: none;
-  display: flex;
-  align-items: center;
   gap: var(--space-xs);
   transition: all var(--transition-base);
   border: 2px solid transparent;
@@ -161,7 +160,7 @@
 
 /* Mobile Menu Toggle */
 .mobile-menu-toggle {
-  display: none;
+  display: flex;
   flex-direction: column;
   gap: 5px;
   background: rgba(59, 130, 246, 0.2);
@@ -449,10 +448,6 @@
     display: none;
   }
   
-  .mobile-menu-toggle {
-    display: flex;
-  }
-  
   .mobile-menu {
     max-width: 100%;
   }
@@ -530,20 +525,9 @@
     align-items: center;
   }
   
-  .nav-links {
-    flex: 1 1 auto;
-    justify-content: center;
-    gap: var(--space-md);
-    padding-left: var(--space-md);
-    padding-right: var(--space-md);
-  }
-  
-  .nav-links li:first-child {
-    margin-left: 0;
-  }
-  
-  .nav-cta {
-    margin-left: var(--space-md);
+  /* Keep hamburger menu visible on all screens */
+  .mobile-menu-toggle {
+    display: flex;
   }
   
   .nav-brand {

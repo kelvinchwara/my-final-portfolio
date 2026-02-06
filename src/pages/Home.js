@@ -9,15 +9,15 @@ const Home = () => {
         <div className="hero-background"></div>
         <div className="hero-content">
           <div className="container">
-            <div className="hero-badge">Available for Industrial Intern</div>
+            <div className="hero-badge">⭐ Available for Internship & Entry-Level Roles</div>
             <h1 className="hero-title">
               <span className="hero-name">Kelvin Chwara</span>
               <span className="hero-role">IT Student & Developer</span>
             </h1>
             <p className="hero-description">
               Passionate Information Technology student specializing in networking, 
-              web development, and research. Seeking opportunities to apply technical 
-              skills in real-world environments.
+              web development, and system administration. Seeking opportunities to apply technical 
+              skills in real-world environments and contribute to innovative projects.
             </p>
             
             <div className="hero-contact-info">
@@ -48,14 +48,28 @@ const Home = () => {
 
             <div className="hero-cta-secondary">
               <Link to="/about" className="btn btn-secondary">
-                <span>Learn More About Me</span>
+                <span>📋 Learn More About Me</span>
               </Link>
               <Link to="/skills" className="btn btn-secondary">
-                <span>View My Skills</span>
+                <span>⭐ View My Skills</span>
               </Link>
-              <a href="/KELVIN.pdf" download className="btn btn-secondary download-btn">
+              <a href="/KELVIN%20CHWARA.pdf" download className="btn btn-secondary download-btn">
                 <span>📄 Download CV</span>
               </a>
+            </div>
+
+            <div className="hero-skills-tags">
+              <p className="tags-label">🚀 Key Technologies</p>
+              <div className="skills-tags-grid">
+                <span className="skill-tag">★ Python</span>
+                <span className="skill-tag">★ JavaScript</span>
+                <span className="skill-tag">★ Django</span>
+                <span className="skill-tag">★ Web Dev</span>
+                <span className="skill-tag">★ Networking</span>
+                <span className="skill-tag">★ System Admin</span>
+                <span className="skill-tag">★ Databases</span>
+                <span className="skill-tag">★ Full-Stack</span>
+              </div>
             </div>
           </div>
         </div>

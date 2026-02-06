@@ -20,8 +20,8 @@ const Projects = () => {
               <p>A complete e-commerce solution built with Django and modern web technologies. Features include user authentication, product catalog, shopping cart, payment integration, and admin dashboard.</p>
               <p><strong>Technologies:</strong> Python, Django, HTML5, CSS3, JavaScript, MySQL, Bootstrap</p>
               <div className="card-actions">
-                <a className="btn btn-primary" href="#">View Demo</a>
-                <a className="btn btn-secondary" href="#">Source Code</a>
+                <button type="button" className="btn btn-primary">View Demo</button>
+                <button type="button" className="btn btn-secondary">Source Code</button>
               </div>
               <div className="video-inline">
                 <video controls preload="metadata" src="/videos/ecommerce_demo.mp4">
@@ -37,8 +37,8 @@ const Projects = () => {
               <p>Collaborative task management application with real-time updates, user roles, and project tracking capabilities.</p>
               <p><strong>Technologies:</strong> Django, Bootstrap, SQLite, Ajax, JavaScript</p>
               <div className="card-actions">
-                <a className="btn btn-primary" href="#">View Demo</a>
-                <a className="btn btn-secondary" href="#">Source Code</a>
+                <button type="button" className="btn btn-primary">View Demo</button>
+                <button type="button" className="btn btn-secondary">Source Code</button>
               </div>
               <div className="video-inline">
                 <video controls preload="metadata" src="/videos/task_demo.mp4">
@@ -54,8 +54,8 @@ const Projects = () => {
               <p>Comprehensive network design and configuration project using Cisco Packet Tracer. Implemented VLANs, routing protocols, and security practices.</p>
               <p><strong>Technologies:</strong> Cisco Packet Tracer, OSPF, EIGRP, VLAN</p>
               <div className="card-actions">
-                <a className="btn btn-primary" href="#">View Demo</a>
-                <a className="btn btn-secondary" href="#">Source Code</a>
+                <button type="button" className="btn btn-primary">View Demo</button>
+                <button type="button" className="btn btn-secondary">Source Code</button>
               </div>
               <div className="video-inline">
                 <video controls preload="metadata" src="/videos/network_demo.mp4">

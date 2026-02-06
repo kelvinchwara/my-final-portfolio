@@ -220,6 +220,52 @@
 }
 
 /* ========================================
+   HERO SKILLS TAGS SECTION
+   ======================================== */
+.hero-skills-tags {
+  margin-top: var(--space-2xl);
+  padding-top: var(--space-xl);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.tags-label {
+  color: var(--text-muted-light);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: var(--space-md);
+  display: block;
+}
+
+.skills-tags-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  justify-content: center;
+}
+
+.skill-tag {
+  display: inline-block;
+  background: rgba(59, 130, 246, 0.25);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  border: 2px solid rgba(59, 130, 246, 0.4);
+  transition: all var(--transition-base);
+  cursor: default;
+}
+
+.skill-tag:hover {
+  background: rgba(59, 130, 246, 0.4);
+  transform: translateY(-3px);
+  border-color: rgba(59, 130, 246, 0.6);
+  box-shadow: 0 5px 15px rgba(59, 130, 246, 0.2);
+}
+
+/* ========================================
    HERO STATS SECTION
    ======================================== */
 .hero-stats {
