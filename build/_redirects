@@ -1,0 +1,5 @@
+# Render redirect rules for React Router
+# This file tells Render to redirect all routes to index.html
+# so React Router can handle client-side routing
+
+/*  /index.html  200

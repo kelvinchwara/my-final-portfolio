@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: kelvin-chwara-portfolio
+    env: static
+    buildCommand: npm run build
+    publishPath: build
+    routes:
+      - route: /*
+        redirect:
+          statusCode: 200
+          destination: /index.html

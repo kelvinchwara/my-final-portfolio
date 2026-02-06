@@ -1,0 +1,15 @@
+/* ========================================
+   APP LEVEL STYLES
+   ======================================== */
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+}
+
+/* Smooth scrolling is handled in index.css */
