@@ -49,6 +49,17 @@ const Projects = () => {
             </article>
 
             <article className="card">
+              <h3>Portfolio Website</h3>
+              <p className="meta">Web Development — Completed</p>
+              <p>Responsive personal portfolio website showcasing web development skills, projects, and professional experience with modern design and smooth navigation.</p>
+              <p><strong>Technologies:</strong> HTML5, CSS3, JavaScript, React</p>
+              <div className="card-actions">
+                <button type="button" className="btn btn-primary">View Demo</button>
+                <button type="button" className="btn btn-secondary">Source Code</button>
+              </div>
+            </article>
+
+            <article className="card">
               <h3>Network Configuration Lab</h3>
               <p className="meta">Networking Project — Completed</p>
               <p>Comprehensive network design and configuration project using Cisco Packet Tracer. Implemented VLANs, routing protocols, and security practices.</p>
