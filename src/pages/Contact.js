@@ -372,7 +372,7 @@ const Contact = () => {
                 <span>🚀</span>
                 <span>View My Projects</span>
               </Link>
-              <a href="/KELVIN.pdf" download className="quick-link">
+              <a href="/KELVIN%20CHWARA.pdf" download className="quick-link">
                 <span>📄</span>
                 <span>Download CV</span>
               </a>

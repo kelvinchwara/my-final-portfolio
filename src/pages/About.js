@@ -40,7 +40,7 @@ const About = () => {
                 </div>
                 <div className="info-item">
                   <span className="info-label">Phone</span>
-                  <span className="info-value">+254 757 450 768</span>
+                  <span className="info-value">+254 762 132 827</span>
                 </div>
                 <div className="info-item">
                   <span className="info-label">Status</span>

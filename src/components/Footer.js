@@ -1,8 +1,16 @@
 import React from 'react';
 import './Footer.css';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const scrollToTop = () => {
+    try {
+      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    } catch (e) {
+      window.scrollTo(0, 0);
+    }
+  };
 
   return (
     <footer className="footer">
@@ -28,25 +36,25 @@ const Footer = () => {
             <div className="footer-section">
               <h4>Quick Links</h4>
               <nav className="footer-nav">
-                <a href="#hero">Home</a>
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#education">Education</a>
-                <a href="#experience">Experience</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
+                <Link to="/" onClick={scrollToTop}>Home</Link>
+                <Link to="/about" onClick={scrollToTop}>About</Link>
+                <Link to="/skills" onClick={scrollToTop}>Skills</Link>
+                <Link to="/education" onClick={scrollToTop}>Education</Link>
+                <Link to="/experience" onClick={scrollToTop}>Experience</Link>
+                <Link to="/projects" onClick={scrollToTop}>Projects</Link>
+                <Link to="/contact" onClick={scrollToTop}>Contact</Link>
               </nav>
             </div>
 
             <div className="footer-section">
               <h4>Services</h4>
               <nav className="footer-nav">
-                <a href="#contact">Web Development</a>
-                <a href="#contact">Network Configuration</a>
-                <a href="#contact">IT Consulting</a>
-                <a href="#contact">System Administration</a>
-                <a href="#contact">Database Management</a>
-                <a href="#contact">Technical Support</a>
+                <Link to="/contact" onClick={scrollToTop}>Web Development</Link>
+                <Link to="/contact" onClick={scrollToTop}>Network Configuration</Link>
+                <Link to="/contact" onClick={scrollToTop}>IT Consulting</Link>
+                <Link to="/contact" onClick={scrollToTop}>System Administration</Link>
+                <Link to="/contact" onClick={scrollToTop}>Database Management</Link>
+                <Link to="/contact" onClick={scrollToTop}>Technical Support</Link>
               </nav>
             </div>
 
@@ -59,7 +67,7 @@ const Footer = () => {
                 </div>
                 <div className="contact-item">
                   <span className="contact-icon">📱</span>
-                  <a href="tel:+254757450768">+254 757 450 768</a>
+                  <a href="tel:+254762132827">+254 762 132 827</a>
                 </div>
                 <div className="contact-item">
                   <span className="contact-icon">💬</span>
@@ -71,7 +79,7 @@ const Footer = () => {
                 </div>
               </div>
               <div className="footer-actions">
-                <a href="#contact" className="btn btn-primary">Get In Touch</a>
+                <Link to="/contact" onClick={scrollToTop} className="btn btn-primary">Get In Touch</Link>
                 <a href="/KELVIN%20CHWARA.pdf" download className="btn btn-secondary">Download CV</a>
               </div>
             </div>
@@ -86,9 +94,9 @@ const Footer = () => {
               © {currentYear} Kelvin Chwara SagiNi. All rights reserved.
             </p>
             <div className="footer-links">
-              <a href="/privacy">Privacy Policy</a>
-              <a href="/terms">Terms of Service</a>
-              <a href="/sitemap">Sitemap</a>
+              <button type="button" className="btn btn-secondary" onClick={scrollToTop}>
+                Back to Top ↑
+              </button>
             </div>
           </div>
         </div>

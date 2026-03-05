@@ -3,258 +3,270 @@ import './Experience.css';
 import { Link } from 'react-router-dom';
 
 const Experience = () => {
+  const stats = [
+    { icon: '🏆', number: '2+', label: 'Internships & Attachments' },
+    { icon: '📊', number: '50+', label: 'Support Tickets Resolved' },
+    { icon: '🚀', number: '10+', label: 'Projects Completed' },
+    { icon: '🤝', number: '50+', label: 'People Trained' },
+  ];
+
+  const timeline = [
+    {
+      key: 'ram-hospital',
+      featured: true,
+      status: 'Current',
+      badge: 'Now',
+      role: 'IT Internship (IT Support)',
+      company: 'RAM Hospital - Kisii',
+      dates: 'Sept 2025 - Present • Kisii, Kenya',
+      summary:
+        'Providing comprehensive IT support in a healthcare environment, managing critical infrastructure and ensuring reliable hospital operations.',
+      responsibilitiesTitle: 'Key Responsibilities',
+      responsibilities: [
+        'Configured and maintained computer networks across hospital departments',
+        'Installed and updated operating systems on 50+ workstations',
+        'Set up and managed CCTV security systems for facility monitoring',
+        'Performed software installation, updates, and maintenance',
+        'Resolved printer, peripheral, and hardware issues promptly',
+        'Provided technical support to hospital staff and departments',
+      ],
+      achievementsTitle: 'Key Achievements',
+      achievements: [
+        'Successfully implemented network configurations improving connectivity',
+        'Enhanced hospital security through CCTV system management',
+        'Reduced system downtime through proactive maintenance protocols',
+      ],
+      skillsTitle: 'Skills Developed',
+      skills: [
+        'Network Configuration',
+        'System Administration',
+        'CCTV Systems',
+        'Hardware Support',
+        'Troubleshooting',
+        'Healthcare IT',
+      ],
+      delay: '0.05s',
+    },
+    {
+      key: 'mku-attachment',
+      featured: false,
+      status: 'Completed',
+      badge: '2025',
+      role: 'IT Industrial Attachment Student',
+      company: 'Mount Kenya University - Kisii Branch',
+      dates: 'May 2025 - Aug 2025 • Kisii, Kenya',
+      summary:
+        'Completed a 4-month industrial attachment, gaining hands-on experience in IT operations and enterprise infrastructure management.',
+      responsibilitiesTitle: 'Key Responsibilities',
+      responsibilities: [
+        'Troubleshooting and optimizing IT systems for university operations',
+        'Supporting network configuration and maintenance across campus',
+        'Applying academic knowledge to solve real-world IT challenges',
+        'Assisting with IT operations and system administration tasks',
+      ],
+      achievementsTitle: 'Key Achievements',
+      achievements: [
+        'Successfully completed a 4-month intensive industrial attachment',
+        'Gained practical experience in enterprise IT environments',
+        'Contributed to system optimization and performance improvement projects',
+      ],
+      skillsTitle: 'Skills Developed',
+      skills: [
+        'IT Operations',
+        'Network Configuration',
+        'System Administration',
+        'Problem Solving',
+        'Technical Support',
+      ],
+      delay: '0.12s',
+    },
+    {
+      key: 'ajira-workshop',
+      featured: false,
+      status: null,
+      badge: '2024',
+      role: 'Digital Marketing & Networking Workshop',
+      company: 'Ajira Digital',
+      dates: '2024 (2 days) • Workshop',
+      summary:
+        'Intensive workshop covering digital marketing strategies, online business, and networking fundamentals.',
+      responsibilitiesTitle: null,
+      responsibilities: [],
+      achievementsTitle: 'Skills Acquired',
+      achievements: [],
+      skillsTitle: null,
+      skills: ['Digital Marketing', 'Online Business', 'Networking Basics', 'Social Media Marketing'],
+      delay: '0.18s',
+    },
+    {
+      key: 'community-volunteer',
+      featured: false,
+      status: null,
+      badge: '2023-2024',
+      role: 'IT Support Volunteer',
+      company: 'Local Community Center',
+      dates: '2023 - 2024 • Community Service',
+      summary:
+        'Provided IT support and digital literacy training to community members, helping bridge the technology gap.',
+      responsibilitiesTitle: null,
+      responsibilities: [],
+      achievementsTitle: 'Impact',
+      achievements: [
+        'Delivered training sessions to 30+ community members',
+        'Configured lab machines and provided network troubleshooting',
+        'Made technology accessible to underserved populations',
+      ],
+      skillsTitle: null,
+      skills: [],
+      delay: '0.24s',
+    },
+    {
+      key: 'peer-tutor',
+      featured: false,
+      status: null,
+      badge: '2019-2020',
+      role: 'Peer Tutor',
+      company: 'Nyasore SDA Secondary School',
+      dates: '2019 - 2020 • Academic',
+      summary:
+        'Tutored computer studies and basic programming, fostering interest in technology among secondary school students.',
+      responsibilitiesTitle: null,
+      responsibilities: [],
+      achievementsTitle: 'Impact',
+      achievements: [
+        'Mentored 20+ students in computer studies and programming fundamentals',
+        'Improved student performance and confidence in technical subjects',
+      ],
+      skillsTitle: null,
+      skills: [],
+      delay: '0.30s',
+    },
+  ];
+
   return (
     <div className="page experience-page">
-      <div className="container">
-        <header className="page-header">
-          <span className="page-badge">💼 Professional Journey</span>
-          <h1 className="page-title">Experience & Attachments</h1>
-          <p className="page-subtitle">Building practical IT skills through hands-on industrial attachments, academic projects, and volunteer initiatives. Transforming theoretical knowledge into real-world solutions.</p>
-        </header>
+      {/* Hero Section */}
+      <section className="experience-hero">
+        <div className="hero-content container">
+          <header className="page-header">
+            <span className="page-badge">💼 Professional Journey</span>
+            <h1 className="page-title">Experience & Internships</h1>
+            <p className="page-subtitle">
+              Building practical IT skills through internships, industrial attachments, academic projects, and volunteer initiatives—transforming theoretical knowledge into real-world solutions.
+            </p>
+          </header>
+        </div>
+      </section>
 
+      <div className="container">
+        {/* Stats Section */}
         <div className="experience-stats">
-          <div className="stat-box">
-            <div className="stat-icon">🏆</div>
-            <div className="stat-content">
-              <div className="stat-number">2+</div>
-              <div className="stat-text">Industrial Attachments</div>
+          {stats.map((s) => (
+            <div className="stat-box" key={s.label}>
+              <div className="stat-icon">
+                <span>{s.icon}</span>
+              </div>
+              <div className="stat-content">
+                <div className="stat-number">{s.number}</div>
+                <div className="stat-text">{s.label}</div>
+              </div>
             </div>
-          </div>
-          <div className="stat-box">
-            <div className="stat-icon">📊</div>
-            <div className="stat-content">
-              <div className="stat-number">50+</div>
-              <div className="stat-text">Support Tickets Resolved</div>
-            </div>
-          </div>
-          <div className="stat-box">
-            <div className="stat-icon">🚀</div>
-            <div className="stat-content">
-              <div className="stat-number">10+</div>
-              <div className="stat-text">Projects Completed</div>
-            </div>
-          </div>
-          <div className="stat-box">
-            <div className="stat-icon">🤝</div>
-            <div className="stat-content">
-              <div className="stat-number">50+</div>
-              <div className="stat-text">People Trained</div>
-            </div>
-          </div>
+          ))}
         </div>
 
+        {/* Main Content */}
         <div className="experience-container">
           <main className="timeline">
             <h2 className="section-title">Professional Work Timeline</h2>
 
-            <article className="timeline-card featured reveal" style={{ '--delay': '0.05s' }}>
-              <div className="timeline-status-badge">Current</div>
-              <div className="timeline-header">
-                <div className="timeline-badge" style={{backgroundColor: '#dbeafe', color: '#2563eb', fontSize: '14px', fontWeight: '600'}}>Now</div>
-                <div className="timeline-meta-right">
-                  <div className="timeline-role" style={{display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '16px', fontWeight: '700', color: '#1f2937', marginBottom: '0.5rem'}}>
-                    📋 IT Industrial Attachment
+            {timeline.map((item) => (
+              <article
+                key={item.key}
+                className={`timeline-card ${item.featured ? 'featured' : ''}`}
+                style={{ '--delay': item.delay }}
+              >
+                {item.status ? (
+                  <div
+                    className={`timeline-status-badge ${
+                      item.status === 'Current' ? 'is-current' : 'is-completed'
+                    }`}
+                  >
+                    {item.status}
                   </div>
-                  <div className="timeline-company" style={{color: '#2563eb', fontWeight: '600', fontSize: '15px', marginBottom: '0.25rem'}}>RAM Hospital - Kisii</div>
-                  <div className="timeline-dates" style={{color: '#6b7280', fontSize: '13px', fontWeight: '500'}}>Sept 2025 - Present • Kisii, Kenya</div>
-                </div>
-              </div>
+                ) : null}
 
-              <div className="role-details">
-                <p className="lead" style={{backgroundColor: '#eff6ff', borderLeft: '4px solid #3b82f6', padding: '1rem', borderRadius: '0.5rem', color: '#4b5563', fontSize: '14px', fontWeight: '500', lineHeight: '1.6', margin: '1.5rem 0'}}>
-                  Provide comprehensive IT support in a healthcare environment, managing critical infrastructure and ensuring reliable hospital operations.
-                </p>
-
-                <div className="responsibilities-section">
-                  <h4 style={{color: '#1f2937', fontSize: '15px', fontWeight: '700', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
-                    💼 Key Responsibilities
-                  </h4>
-                  <ul className="education-highlights">
-                    <li style={{color: '#6b7280', fontSize: '14px', padding: '0.75rem 0', paddingLeft: '1.5rem'}}>Configured and maintained computer networks across hospital departments</li>
-                    <li style={{color: '#6b7280', fontSize: '14px', padding: '0.75rem 0', paddingLeft: '1.5rem'}}>Installed and updated operating systems on 50+ workstations</li>
-                    <li style={{color: '#6b7280', fontSize: '14px', padding: '0.75rem 0', paddingLeft: '1.5rem'}}>Set up and managed CCTV security systems for facility monitoring</li>
-                    <li style={{color: '#6b7280', fontSize: '14px', padding: '0.75rem 0', paddingLeft: '1.5rem'}}>Performed software installation, updates, and maintenance</li>
-                    <li style={{color: '#6b7280', fontSize: '14px', padding: '0.75rem 0', paddingLeft: '1.5rem'}}>Resolved printer, peripheral, and hardware issues promptly</li>
-                    <li style={{color: '#6b7280', fontSize: '14px', padding: '0.75rem 0', paddingLeft: '1.5rem'}}>Provided technical support to hospital staff and departments</li>
-                  </ul>
-                </div>
-
-                <div className="achievements-section">
-                  <h4 style={{color: '#1f2937', fontSize: '15px', fontWeight: '700', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
-                    ⭐ Key Achievements
-                  </h4>
-                  <ul className="education-highlights">
-                    <li style={{color: '#6b7280', fontSize: '14px', padding: '0.75rem 0', paddingLeft: '1.5rem'}}>Successfully implemented network configurations improving connectivity</li>
-                    <li style={{color: '#6b7280', fontSize: '14px', padding: '0.75rem 0', paddingLeft: '1.5rem'}}>Enhanced hospital security through CCTV system management</li>
-                    <li style={{color: '#6b7280', fontSize: '14px', padding: '0.75rem 0', paddingLeft: '1.5rem'}}>Reduced system downtime through proactive maintenance protocols</li>
-                  </ul>
-                </div>
-
-                <div className="skills-section">
-                  <h4 style={{color: '#1f2937', fontSize: '15px', fontWeight: '700', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
-                    🛠️ Skills Developed
-                  </h4>
-                  <div className="coursework-grid">
-                    <span className="course-tag" style={{backgroundColor: '#dbeafe', color: '#2563eb', fontSize: '12px', fontWeight: '600', padding: '0.5rem 1rem', borderRadius: '9999px'}}>Network Configuration</span>
-                    <span className="course-tag" style={{backgroundColor: '#dbeafe', color: '#2563eb', fontSize: '12px', fontWeight: '600', padding: '0.5rem 1rem', borderRadius: '9999px'}}>System Administration</span>
-                    <span className="course-tag" style={{backgroundColor: '#dbeafe', color: '#2563eb', fontSize: '12px', fontWeight: '600', padding: '0.5rem 1rem', borderRadius: '9999px'}}>CCTV Systems</span>
-                    <span className="course-tag" style={{backgroundColor: '#dbeafe', color: '#2563eb', fontSize: '12px', fontWeight: '600', padding: '0.5rem 1rem', borderRadius: '9999px'}}>Hardware Support</span>
-                    <span className="course-tag" style={{backgroundColor: '#dbeafe', color: '#2563eb', fontSize: '12px', fontWeight: '600', padding: '0.5rem 1rem', borderRadius: '9999px'}}>Troubleshooting</span>
-                    <span className="course-tag" style={{backgroundColor: '#dbeafe', color: '#2563eb', fontSize: '12px', fontWeight: '600', padding: '0.5rem 1rem', borderRadius: '9999px'}}>Healthcare IT</span>
+                <div className="timeline-header">
+                  <div className="timeline-badge">{item.badge}</div>
+                  <div className="timeline-meta-right">
+                    <div className="timeline-role">
+                      <span role="img" aria-label="role">{item.role.includes('📋') ? '📋' : item.role.includes('🎓') ? '🎓' : item.role.includes('📚') ? '📚' : item.role.includes('🤝') ? '🤝' : '👨‍🏫'}</span>
+                      {item.role.replace(/^[^\w]*/, '')}
+                    </div>
+                    <div className="timeline-company">{item.company}</div>
+                    <div className="timeline-dates">{item.dates}</div>
                   </div>
                 </div>
-              </div>
-            </article>
 
-            <article className="timeline-card reveal" style={{ '--delay': '0.12s', border: '2px solid #dbeafe', borderRadius: '0.5rem' }}>
-              <div className="timeline-status-badge" style={{backgroundColor: '#dbeafe', color: '#059669', textTransform: 'uppercase'}}>Completed</div>
-              <div className="timeline-header">
-                <div className="timeline-badge" style={{backgroundColor: '#dbeafe', color: '#2563eb', fontSize: '14px', fontWeight: '600'}}>2025</div>
-                <div className="timeline-meta-right">
-                  <div className="timeline-role" style={{display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '16px', fontWeight: '700', color: '#1f2937', marginBottom: '0.5rem'}}>
-                    🎓 IT Industrial Attachment Student
-                  </div>
-                  <div className="timeline-company" style={{color: '#2563eb', fontWeight: '600', fontSize: '15px', marginBottom: '0.25rem'}}>Mount Kenya University - Kisii Branch</div>
-                  <div className="timeline-dates" style={{color: '#6b7280', fontSize: '13px', fontWeight: '500'}}>May 2025 - Aug 2025 • Kisii, Kenya</div>
+                <div className="role-details">
+                  <p className="lead">{item.summary}</p>
+
+                  {item.responsibilitiesTitle && item.responsibilities.length ? (
+                    <div className="responsibilities-section">
+                      <h4>💼 {item.responsibilitiesTitle}</h4>
+                      <ul className="education-highlights">
+                        {item.responsibilities.map((r) => (
+                          <li key={r}>{r}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : null}
+
+                  {item.achievementsTitle && item.achievements.length ? (
+                    <div className="achievements-section">
+                      <h4>⭐ {item.achievementsTitle}</h4>
+                      <ul className="education-highlights">
+                        {item.achievements.map((a) => (
+                          <li key={a}>{a}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : null}
+
+                  {item.skillsTitle && item.skills.length ? (
+                    <div className="skills-section">
+                      <h4>🛠️ {item.skillsTitle}</h4>
+                      <div className="coursework-grid">
+                        {item.skills.map((s) => (
+                          <span key={s} className="course-tag">
+                            {s}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  ) : null}
+
+                  {!item.skillsTitle && item.skills.length ? (
+                    <div className="skills-section">
+                      <h4>🛠️ Skills Acquired</h4>
+                      <div className="coursework-grid">
+                        {item.skills.map((s) => (
+                          <span key={s} className="course-tag">
+                            {s}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  ) : null}
                 </div>
-              </div>
-
-              <div className="role-details">
-                <p className="lead" style={{backgroundColor: '#eff6ff', borderLeft: '4px solid #3b82f6', padding: '1rem', borderRadius: '0.5rem', color: '#4b5563', fontSize: '14px', fontWeight: '500', lineHeight: '1.6', margin: '1.5rem 0'}}>
-                  Completed a 4-month industrial attachment, gaining hands-on experience in IT operations and enterprise infrastructure management.
-                </p>
-
-                <div className="responsibilities-section">
-                  <h4 style={{color: '#1f2937', fontSize: '15px', fontWeight: '700', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
-                    💼 Key Responsibilities
-                  </h4>
-                  <ul className="education-highlights">
-                    <li style={{color: '#6b7280', fontSize: '14px', padding: '0.75rem 0', paddingLeft: '1.5rem'}}>Troubleshooting and optimizing IT systems for university operations</li>
-                    <li style={{color: '#6b7280', fontSize: '14px', padding: '0.75rem 0', paddingLeft: '1.5rem'}}>Supporting network configuration and maintenance across campus</li>
-                    <li style={{color: '#6b7280', fontSize: '14px', padding: '0.75rem 0', paddingLeft: '1.5rem'}}>Applying academic knowledge to solve real-world IT challenges</li>
-                    <li style={{color: '#6b7280', fontSize: '14px', padding: '0.75rem 0', paddingLeft: '1.5rem'}}>Assisting with IT operations and system administration tasks</li>
-                  </ul>
-                </div>
-
-                <div className="achievements-section">
-                  <h4 style={{color: '#1f2937', fontSize: '15px', fontWeight: '700', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
-                    ⭐ Key Achievements
-                  </h4>
-                  <ul className="education-highlights">
-                    <li style={{color: '#6b7280', fontSize: '14px', padding: '0.75rem 0', paddingLeft: '1.5rem'}}>Successfully completed 4-month intensive industrial attachment</li>
-                    <li style={{color: '#6b7280', fontSize: '14px', padding: '0.75rem 0', paddingLeft: '1.5rem'}}>Gained practical experience in enterprise IT environments</li>
-                    <li style={{color: '#6b7280', fontSize: '14px', padding: '0.75rem 0', paddingLeft: '1.5rem'}}>Contributed to system optimization and performance improvement projects</li>
-                  </ul>
-                </div>
-
-                <div className="skills-section">
-                  <h4 style={{color: '#1f2937', fontSize: '15px', fontWeight: '700', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
-                    🛠️ Skills Developed
-                  </h4>
-                  <div className="coursework-grid">
-                    <span className="course-tag" style={{backgroundColor: '#dbeafe', color: '#2563eb', fontSize: '12px', fontWeight: '600', padding: '0.5rem 1rem', borderRadius: '9999px'}}>IT Operations</span>
-                    <span className="course-tag" style={{backgroundColor: '#dbeafe', color: '#2563eb', fontSize: '12px', fontWeight: '600', padding: '0.5rem 1rem', borderRadius: '9999px'}}>Network Configuration</span>
-                    <span className="course-tag" style={{backgroundColor: '#dbeafe', color: '#2563eb', fontSize: '12px', fontWeight: '600', padding: '0.5rem 1rem', borderRadius: '9999px'}}>System Administration</span>
-                    <span className="course-tag" style={{backgroundColor: '#dbeafe', color: '#2563eb', fontSize: '12px', fontWeight: '600', padding: '0.5rem 1rem', borderRadius: '9999px'}}>Problem Solving</span>
-                    <span className="course-tag" style={{backgroundColor: '#dbeafe', color: '#2563eb', fontSize: '12px', fontWeight: '600', padding: '0.5rem 1rem', borderRadius: '9999px'}}>Technical Support</span>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article className="timeline-card reveal" style={{ '--delay': '0.18s', border: '2px solid #dbeafe', borderRadius: '0.5rem' }}>
-              <div className="timeline-header">
-                <div className="timeline-badge" style={{backgroundColor: '#dbeafe', color: '#2563eb', fontSize: '14px', fontWeight: '600'}}>2024</div>
-                <div className="timeline-meta-right">
-                  <div className="timeline-role" style={{display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '16px', fontWeight: '700', color: '#1f2937', marginBottom: '0.5rem'}}>
-                    📚 Digital Marketing & Networking Workshop
-                  </div>
-                  <div className="timeline-company" style={{color: '#2563eb', fontWeight: '600', fontSize: '15px', marginBottom: '0.25rem'}}>Ajira Digital</div>
-                  <div className="timeline-dates" style={{color: '#6b7280', fontSize: '13px', fontWeight: '500'}}>2024 (2 days) • Workshop</div>
-                </div>
-              </div>
-
-              <div className="role-details">
-                <p className="lead" style={{backgroundColor: '#eff6ff', borderLeft: '4px solid #3b82f6', padding: '1rem', borderRadius: '0.5rem', color: '#4b5563', fontSize: '14px', fontWeight: '500', lineHeight: '1.6', margin: '1.5rem 0'}}>
-                  Intensive workshop covering digital marketing strategies, online business, and networking fundamentals.
-                </p>
-                <div className="skills-section">
-                  <h4 style={{color: '#1f2937', fontSize: '15px', fontWeight: '700', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
-                    🛠️ Skills Acquired
-                  </h4>
-                  <div className="coursework-grid">
-                    <span className="course-tag" style={{backgroundColor: '#dbeafe', color: '#2563eb', fontSize: '12px', fontWeight: '600', padding: '0.5rem 1rem', borderRadius: '9999px'}}>Digital Marketing</span>
-                    <span className="course-tag" style={{backgroundColor: '#dbeafe', color: '#2563eb', fontSize: '12px', fontWeight: '600', padding: '0.5rem 1rem', borderRadius: '9999px'}}>Online Business</span>
-                    <span className="course-tag" style={{backgroundColor: '#dbeafe', color: '#2563eb', fontSize: '12px', fontWeight: '600', padding: '0.5rem 1rem', borderRadius: '9999px'}}>Networking Basics</span>
-                    <span className="course-tag" style={{backgroundColor: '#dbeafe', color: '#2563eb', fontSize: '12px', fontWeight: '600', padding: '0.5rem 1rem', borderRadius: '9999px'}}>Social Media Marketing</span>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article className="timeline-card reveal" style={{ '--delay': '0.24s', border: '2px solid #dbeafe', borderRadius: '0.5rem' }}>
-              <div className="timeline-header">
-                <div className="timeline-badge" style={{backgroundColor: '#dbeafe', color: '#2563eb', fontSize: '14px', fontWeight: '600'}}>2023-2024</div>
-                <div className="timeline-meta-right">
-                  <div className="timeline-role" style={{display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '16px', fontWeight: '700', color: '#1f2937', marginBottom: '0.5rem'}}>
-                    🤝 IT Support Volunteer
-                  </div>
-                  <div className="timeline-company" style={{color: '#2563eb', fontWeight: '600', fontSize: '15px', marginBottom: '0.25rem'}}>Local Community Center</div>
-                  <div className="timeline-dates" style={{color: '#6b7280', fontSize: '13px', fontWeight: '500'}}>2023 - 2024 • Community Service</div>
-                </div>
-              </div>
-
-              <div className="role-details">
-                <p className="lead" style={{backgroundColor: '#eff6ff', borderLeft: '4px solid #3b82f6', padding: '1rem', borderRadius: '0.5rem', color: '#4b5563', fontSize: '14px', fontWeight: '500', lineHeight: '1.6', margin: '1.5rem 0'}}>
-                  Provided IT support and digital literacy training to community members, helping bridge the technology gap.
-                </p>
-                <div className="achievements-section">
-                  <h4 style={{color: '#1f2937', fontSize: '15px', fontWeight: '700', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
-                    ⭐ Impact
-                  </h4>
-                  <ul className="education-highlights">
-                    <li style={{color: '#6b7280', fontSize: '14px', padding: '0.75rem 0', paddingLeft: '1.5rem'}}>Delivered training sessions to 30+ community members</li>
-                    <li style={{color: '#6b7280', fontSize: '14px', padding: '0.75rem 0', paddingLeft: '1.5rem'}}>Configured lab machines and provided network troubleshooting</li>
-                    <li style={{color: '#6b7280', fontSize: '14px', padding: '0.75rem 0', paddingLeft: '1.5rem'}}>Made technology accessible to underserved populations</li>
-                  </ul>
-                </div>
-              </div>
-            </article>
-
-            <article className="timeline-card reveal" style={{ '--delay': '0.30s', border: '2px solid #dbeafe', borderRadius: '0.5rem' }}>
-              <div className="timeline-header">
-                <div className="timeline-badge" style={{backgroundColor: '#dbeafe', color: '#2563eb', fontSize: '14px', fontWeight: '600'}}>2019-2020</div>
-                <div className="timeline-meta-right">
-                  <div className="timeline-role" style={{display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '16px', fontWeight: '700', color: '#1f2937', marginBottom: '0.5rem'}}>
-                    👨‍🏫 Peer Tutor
-                  </div>
-                  <div className="timeline-company" style={{color: '#2563eb', fontWeight: '600', fontSize: '15px', marginBottom: '0.25rem'}}>Nyasore SDA Secondary School</div>
-                  <div className="timeline-dates" style={{color: '#6b7280', fontSize: '13px', fontWeight: '500'}}>2019 - 2020 • Academic</div>
-                </div>
-              </div>
-
-              <div className="role-details">
-                <p className="lead" style={{backgroundColor: '#eff6ff', borderLeft: '4px solid #3b82f6', padding: '1rem', borderRadius: '0.5rem', color: '#4b5563', fontSize: '14px', fontWeight: '500', lineHeight: '1.6', margin: '1.5rem 0'}}>
-                  Tutored computer studies and basic programming, fostering interest in technology among secondary school students.
-                </p>
-                <div className="achievements-section">
-                  <h4 style={{color: '#1f2937', fontSize: '15px', fontWeight: '700', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
-                    ⭐ Impact
-                  </h4>
-                  <ul className="education-highlights">
-                    <li style={{color: '#6b7280', fontSize: '14px', padding: '0.75rem 0', paddingLeft: '1.5rem'}}>Mentored 20+ students in computer studies and programming fundamentals</li>
-                    <li style={{color: '#6b7280', fontSize: '14px', padding: '0.75rem 0', paddingLeft: '1.5rem'}}>Improved student performance and confidence in technical subjects</li>
-                  </ul>
-                </div>
-              </div>
-            </article>
+              </article>
+            ))}
           </main>
 
           <aside className="experience-sidebar">
-            <div className="sidebar-card reveal" style={{ '--delay': '0.22s' }}>
+            <div className="sidebar-card" style={{ '--delay': '0.22s' }}>
               <h3>📊 Experience Summary</h3>
               <div className="summary-stat">
-                <span className="label">Industrial Attachments:</span>
+                <span className="label">Internships & Attachments:</span>
                 <span className="value">2</span>
               </div>
               <div className="summary-stat">
@@ -271,7 +283,7 @@ const Experience = () => {
               </div>
             </div>
 
-            <div className="sidebar-card reveal" style={{ '--delay': '0.28s' }}>
+            <div className="sidebar-card" style={{ '--delay': '0.28s' }}>
               <h3>🛠️ Core Skills</h3>
               <div className="skill-list">
                 <div className="skill">
@@ -297,9 +309,9 @@ const Experience = () => {
               </div>
             </div>
 
-            <div className="sidebar-card cta-card reveal" style={{ '--delay': '0.34s' }}>
+            <div className="sidebar-card cta-card" style={{ '--delay': '0.34s' }}>
               <h3>💼 Ready for Opportunities</h3>
-              <p>Actively seeking industrial attachments and entry-level positions to apply and expand my technical skills in professional environments.</p>
+              <p>Actively seeking internships and entry-level opportunities to apply and expand my technical skills in professional environments.</p>
               <div className="cta-buttons">
                 <Link to="/contact" className="btn btn-primary">Contact Me</Link>
                 <Link to="/projects" className="btn btn-secondary">View Projects</Link>
@@ -308,69 +320,71 @@ const Experience = () => {
           </aside>
         </div>
 
+        {/* Projects Showcase */}
         <section className="projects-showcase">
           <h2 className="section-title">📁 Project Portfolio</h2>
           <p className="section-description">Academic and professional projects demonstrating practical technical expertise.</p>
 
           <div className="projects-grid">
-            <article className="project-card reveal" style={{ '--delay': '0.05s', border: '2px solid #dbeafe', borderRadius: '0.5rem', backgroundColor: '#ffffff' }}>
+            <article className="project-card">
               <div className="project-header">
-                <h3 style={{color: '#1f2937', fontSize: '16px', fontWeight: '700'}}>🌐 Full-Stack Web Applications</h3>
-                <span className="project-tag" style={{backgroundColor: '#dbeafe', color: '#2563eb', fontSize: '12px', fontWeight: '600', padding: '0.35rem 0.85rem', borderRadius: '9999px'}}>Course Projects</span>
+                <h3>🌐 Full-Stack Web Applications</h3>
+                <span className="project-tag">Course Projects</span>
               </div>
-              <p className="project-source" style={{color: '#2563eb', fontSize: '14px', fontWeight: '600', marginBottom: '1rem'}}>Emobilis Technology Institute (Oct 2024 - Dec 2024)</p>
+              <p className="project-source">Emobilis Technology Institute (Oct 2024 - Dec 2024)</p>
               <ul className="project-list">
-                <li style={{color: '#6b7280', fontSize: '14px', padding: '0.5rem 0', paddingLeft: '1.5rem'}}><strong style={{color: '#1f2937'}}>E-commerce Platform:</strong> Complete solution with authentication, product catalog, and payment integration using Python, Django, MySQL</li>
-                <li style={{color: '#6b7280', fontSize: '14px', padding: '0.5rem 0', paddingLeft: '1.5rem'}}><strong style={{color: '#1f2937'}}>Task Management System:</strong> Collaborative app with real-time updates and user roles using Django, Bootstrap, SQLite</li>
-                <li style={{color: '#6b7280', fontSize: '14px', padding: '0.5rem 0', paddingLeft: '1.5rem'}}><strong style={{color: '#1f2937'}}>Portfolio Website:</strong> Responsive site showcasing web skills using HTML5, CSS3, JavaScript</li>
+                <li><strong>E-commerce Platform:</strong> Complete solution with authentication, product catalog, and payment integration using Python, Django, MySQL</li>
+                <li><strong>Task Management System:</strong> Collaborative app with real-time updates and user roles using Django, Bootstrap, SQLite</li>
+                <li><strong>Portfolio Website:</strong> Responsive site showcasing web skills using HTML5, CSS3, JavaScript</li>
               </ul>
               <div className="project-tech">
-                <span className="tech-tag" style={{backgroundColor: '#eff6ff', color: '#2563eb', fontSize: '12px', fontWeight: '500', padding: '0.35rem 0.75rem', borderRadius: '0.25rem', marginRight: '0.5rem', marginBottom: '0.5rem', display: 'inline-block'}}>Python</span>
-                <span className="tech-tag" style={{backgroundColor: '#eff6ff', color: '#2563eb', fontSize: '12px', fontWeight: '500', padding: '0.35rem 0.75rem', borderRadius: '0.25rem', marginRight: '0.5rem', marginBottom: '0.5rem', display: 'inline-block'}}>Django</span>
-                <span className="tech-tag" style={{backgroundColor: '#eff6ff', color: '#2563eb', fontSize: '12px', fontWeight: '500', padding: '0.35rem 0.75rem', borderRadius: '0.25rem', marginRight: '0.5rem', marginBottom: '0.5rem', display: 'inline-block'}}>MySQL</span>
-                <span className="tech-tag" style={{backgroundColor: '#eff6ff', color: '#2563eb', fontSize: '12px', fontWeight: '500', padding: '0.35rem 0.75rem', borderRadius: '0.25rem', marginRight: '0.5rem', marginBottom: '0.5rem', display: 'inline-block'}}>JavaScript</span>
+                <span className="tech-tag">Python</span>
+                <span className="tech-tag">Django</span>
+                <span className="tech-tag">MySQL</span>
+                <span className="tech-tag">JavaScript</span>
               </div>
             </article>
 
-            <article className="project-card reveal" style={{ '--delay': '0.12s', border: '2px solid #dbeafe', borderRadius: '0.5rem', backgroundColor: '#ffffff' }}>
+            <article className="project-card">
               <div className="project-header">
-                <h3 style={{color: '#1f2937', fontSize: '16px', fontWeight: '700'}}>🎓 Academic Projects</h3>
-                <span className="project-tag" style={{backgroundColor: '#dbeafe', color: '#2563eb', fontSize: '12px', fontWeight: '600', padding: '0.35rem 0.85rem', borderRadius: '9999px'}}>University</span>
+                <h3>🎓 Academic Projects</h3>
+                <span className="project-tag">University</span>
               </div>
-              <p className="project-source" style={{color: '#2563eb', fontSize: '14px', fontWeight: '600', marginBottom: '1rem'}}>Kisii University (2021 - Present)</p>
+              <p className="project-source">Kisii University (2021 - Present)</p>
               <ul className="project-list">
-                <li style={{color: '#6b7280', fontSize: '14px', padding: '0.5rem 0', paddingLeft: '1.5rem'}}><strong style={{color: '#1f2937'}}>Network Configuration Lab:</strong> Designed network topologies, subnetting, and routing using Cisco Packet Tracer</li>
-                <li style={{color: '#6b7280', fontSize: '14px', padding: '0.5rem 0', paddingLeft: '1.5rem'}}><strong style={{color: '#1f2937'}}>Database Management System:</strong> Comprehensive DB design and normalization using MySQL</li>
-                <li style={{color: '#6b7280', fontSize: '14px', padding: '0.5rem 0', paddingLeft: '1.5rem'}}><strong style={{color: '#1f2937'}}>Programming Assignments:</strong> Java and Python tasks focusing on algorithms and optimization</li>
+                <li><strong>Network Configuration Lab:</strong> Designed network topologies, subnetting, and routing using Cisco Packet Tracer</li>
+                <li><strong>Database Management System:</strong> Comprehensive DB design and normalization using MySQL</li>
+                <li><strong>Programming Assignments:</strong> Java and Python tasks focusing on algorithms and optimization</li>
               </ul>
               <div className="project-tech">
-                <span className="tech-tag" style={{backgroundColor: '#eff6ff', color: '#2563eb', fontSize: '12px', fontWeight: '500', padding: '0.35rem 0.75rem', borderRadius: '0.25rem', marginRight: '0.5rem', marginBottom: '0.5rem', display: 'inline-block'}}>Cisco Packet Tracer</span>
-                <span className="tech-tag" style={{backgroundColor: '#eff6ff', color: '#2563eb', fontSize: '12px', fontWeight: '500', padding: '0.35rem 0.75rem', borderRadius: '0.25rem', marginRight: '0.5rem', marginBottom: '0.5rem', display: 'inline-block'}}>MySQL</span>
-                <span className="tech-tag" style={{backgroundColor: '#eff6ff', color: '#2563eb', fontSize: '12px', fontWeight: '500', padding: '0.35rem 0.75rem', borderRadius: '0.25rem', marginRight: '0.5rem', marginBottom: '0.5rem', display: 'inline-block'}}>Java</span>
-                <span className="tech-tag" style={{backgroundColor: '#eff6ff', color: '#2563eb', fontSize: '12px', fontWeight: '500', padding: '0.35rem 0.75rem', borderRadius: '0.25rem', marginRight: '0.5rem', marginBottom: '0.5rem', display: 'inline-block'}}>Python</span>
+                <span className="tech-tag">Cisco Packet Tracer</span>
+                <span className="tech-tag">MySQL</span>
+                <span className="tech-tag">Java</span>
+                <span className="tech-tag">Python</span>
               </div>
             </article>
 
-            <article className="project-card reveal" style={{ '--delay': '0.19s', border: '2px solid #dbeafe', borderRadius: '0.5rem', backgroundColor: '#ffffff' }}>
+            <article className="project-card">
               <div className="project-header">
-                <h3 style={{color: '#1f2937', fontSize: '16px', fontWeight: '700'}}>🤝 Community & Volunteer Projects</h3>
-                <span className="project-tag" style={{backgroundColor: '#dbeafe', color: '#2563eb', fontSize: '12px', fontWeight: '600', padding: '0.35rem 0.85rem', borderRadius: '9999px'}}>Community Service</span>
+                <h3>🤝 Community & Volunteer Projects</h3>
+                <span className="project-tag">Community Service</span>
               </div>
-              <p className="project-source" style={{color: '#2563eb', fontSize: '14px', fontWeight: '600', marginBottom: '1rem'}}>Community-Based Initiatives (2019 - 2024)</p>
+              <p className="project-source">Community-Based Initiatives (2019 - 2024)</p>
               <ul className="project-list">
-                <li style={{color: '#6b7280', fontSize: '14px', padding: '0.5rem 0', paddingLeft: '1.5rem'}}><strong style={{color: '#1f2937'}}>Digital Literacy Program:</strong> Trained 30+ community members in basic IT and computer skills</li>
-                <li style={{color: '#6b7280', fontSize: '14px', padding: '0.5rem 0', paddingLeft: '1.5rem'}}><strong style={{color: '#1f2937'}}>Lab Setup & Maintenance:</strong> Configured and maintained computer labs for educational use</li>
-                <li style={{color: '#6b7280', fontSize: '14px', padding: '0.5rem 0', paddingLeft: '1.5rem'}}><strong style={{color: '#1f2937'}}>Peer Mentoring:</strong> Guided 20+ secondary school students in computer studies and programming</li>
+                <li><strong>Digital Literacy Program:</strong> Trained 30+ community members in basic IT and computer skills</li>
+                <li><strong>Lab Setup & Maintenance:</strong> Configured and maintained computer labs for educational use</li>
+                <li><strong>Peer Mentoring:</strong> Guided 20+ secondary school students in computer studies and programming</li>
               </ul>
               <div className="project-tech">
-                <span className="tech-tag" style={{backgroundColor: '#eff6ff', color: '#2563eb', fontSize: '12px', fontWeight: '500', padding: '0.35rem 0.75rem', borderRadius: '0.25rem', marginRight: '0.5rem', marginBottom: '0.5rem', display: 'inline-block'}}>Community Engagement</span>
-                <span className="tech-tag" style={{backgroundColor: '#eff6ff', color: '#2563eb', fontSize: '12px', fontWeight: '500', padding: '0.35rem 0.75rem', borderRadius: '0.25rem', marginRight: '0.5rem', marginBottom: '0.5rem', display: 'inline-block'}}>Training</span>
-                <span className="tech-tag" style={{backgroundColor: '#eff6ff', color: '#2563eb', fontSize: '12px', fontWeight: '500', padding: '0.35rem 0.75rem', borderRadius: '0.25rem', marginRight: '0.5rem', marginBottom: '0.5rem', display: 'inline-block'}}>Mentoring</span>
+                <span className="tech-tag">Community Engagement</span>
+                <span className="tech-tag">Training</span>
+                <span className="tech-tag">Mentoring</span>
               </div>
             </article>
           </div>
         </section>
 
+        {/* CTA Section */}
         <section className="cta-section">
           <div className="cta-content">
             <h2>Ready to Make an Impact? 🚀</h2>

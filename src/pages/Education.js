@@ -72,44 +72,6 @@ const Education = () => {
               </div>
             </article>
 
-            <article className="timeline-card featured reveal" style={{ '--delay': '0.12s' }}>
-              <div className="timeline-header">
-                <span className="timeline-badge">Industry Experience</span>
-                <span className="timeline-status completed">Completed</span>
-              </div>
-
-              <div className="timeline-body">
-                <div className="timeline-type">Industrial Attachment</div>
-                <h3 className="timeline-title">Industrial Attachment Student</h3>
-                <div className="timeline-institution">Mount Kenya University - Kisii Branch</div>
-                <div className="timeline-meta">
-                  <span>📅 May 2025 - August 2025</span>
-                  <span>📍 Kisii, Kenya</span>
-                </div>
-
-                <div className="certificate-badge">Certificate of Completion</div>
-                <p className="timeline-description">Completed industrial attachment program gaining practical experience in IT operations, system administration, and software development in a professional environment.</p>
-
-                <h4>Key Responsibilities</h4>
-                <ul className="education-highlights">
-                  <li>Assisted in system administration and network maintenance</li>
-                  <li>Participated in software development projects</li>
-                  <li>Gained hands-on experience with database management</li>
-                  <li>Collaborated with IT team on various technical projects</li>
-                </ul>
-
-                <h4>Skills Acquired</h4>
-                <div className="coursework-grid">
-                  <span className="course-tag tech-tag">System Administration</span>
-                  <span className="course-tag tech-tag">Network Configuration</span>
-                  <span className="course-tag tech-tag">Software Development</span>
-                  <span className="course-tag tech-tag">Database Management</span>
-                  <span className="course-tag tech-tag">IT Support</span>
-                  <span className="course-tag tech-tag">Team Collaboration</span>
-                </div>
-              </div>
-            </article>
-
             <article className="timeline-card reveal" style={{ '--delay': '0.18s' }}>
               <div className="timeline-header">
                 <span className="timeline-badge">Professional</span>

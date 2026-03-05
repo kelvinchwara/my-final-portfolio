@@ -2,12 +2,12 @@
    GLOBAL CSS VARIABLES & THEME SYSTEM
    ======================================== */
 :root {
-  /* Color Palette */
-  --primary-color: #2563eb;
-  --primary-light: #3b82f6;
-  --primary-dark: #1d4ed8;
-  --accent-color: #3b82f6;
-  --accent-light: #60a5fa;
+  /* Color Palette - Amber/Orange Theme */
+  --primary-color: #f59e0b;
+  --primary-light: #fbbf24;
+  --primary-dark: #d97706;
+  --accent-color: #f59e0b;
+  --accent-light: #fcd34d;
   
   /* Dark Theme Colors */
   --dark-bg: #0f172a;
@@ -26,10 +26,22 @@
   --text-muted: #64748b;
   --text-muted-light: rgba(255, 255, 255, 0.7);
   
-  /* Gradients */
-  --gradient-primary: linear-gradient(135deg, #2563eb, #3b82f6);
+  /* Gradients - Amber/Orange Theme */
+  --gradient-primary: linear-gradient(135deg, #f59e0b, #d97706);
   --gradient-dark: linear-gradient(135deg, #0f172a, #1e293b);
-  --gradient-light: linear-gradient(180deg, #ffffff, #fbfdff);
+  --gradient-light: linear-gradient(180deg, #ffffff, #fffbeb);
+  --gradient-hero: linear-gradient(135deg, #92400e 0%, #b45309 50%, #d97706 100%);
+  --gradient-card: linear-gradient(145deg, #ffffff 0%, #fffbeb 100%);
+  --gradient-accent: linear-gradient(135deg, #f59e0b, #fcd34d);
+  --gradient-success: linear-gradient(135deg, #10b981, #059669);
+  --gradient-warning: linear-gradient(135deg, #f59e0b, #d97706);
+  --gradient-info: linear-gradient(135deg, #06b6d4, #0891b2);
+  
+  /* Card Gradients */
+  --card-gradient-1: linear-gradient(145deg, #ffffff 0%, #fffbeb 100%);
+  --card-gradient-2: linear-gradient(145deg, #fef3c7 0%, #fde68a 100%);
+  --card-gradient-3: linear-gradient(145deg, #fef3c7 0%, #fde68a 100%);
+  --card-gradient-4: linear-gradient(145deg, #d1fae5 0%, #a7f3d0 100%);
   
   /* Spacing Scale */
   --space-xs: 0.25rem;
@@ -77,19 +89,21 @@
   --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
   --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
   --shadow-2xl: 0 25px 50px rgba(0, 0, 0, 0.25);
-  --shadow-glow: 0 0 15px rgba(59, 130, 246, 0.3);
-  --card-bg: var(--light-card);
-  --accent-muted: rgba(59,130,246,0.08);
-  --glow-color: rgba(59,130,246,0.14);
+  --shadow-glow: 0 0 15px rgba(245, 158, 11, 0.3);
+  --shadow-glow-purple: 0 0 20px rgba(245, 158, 11, 0.3);
+  --card-bg: rgba(255, 255, 255, 0.86);
+  --accent-muted: rgba(245,158,11,0.08);
+  --glow-color: rgba(245,158,11,0.14);
 
-  /* Per-page background tokens (tinted to match nav/footer palette) */
-  --page-bg: linear-gradient(180deg, rgba(255,255,255,0), rgba(255,255,255,0)); /* fallback */
-  --page-bg-home: linear-gradient(180deg, rgba(59,130,246,0.06), rgba(255,255,255,0));
-  --page-bg-projects: linear-gradient(180deg, rgba(14,39,60,0.03), rgba(59,130,246,0.02));
-  --page-bg-skills: linear-gradient(180deg, rgba(37,99,235,0.06), rgba(255,255,255,0));
-  --page-bg-experience: linear-gradient(180deg, rgba(14,39,60,0.04), rgba(255,255,255,0));
-  --page-bg-education: linear-gradient(180deg, rgba(37,99,235,0.04), rgba(255,255,255,0));
-  --page-bg-contact: linear-gradient(180deg, rgba(59,130,246,0.02), rgba(255,255,255,0));
+  /* Per-page background tokens (enhanced with gradients) - Amber/Orange Theme */
+  --page-bg: linear-gradient(180deg, rgba(255,255,255,0), rgba(255,255,255,0));
+  --page-bg-home: linear-gradient(135deg, #fff7ed 0%, #ffedd5 50%, #fef3c7 100%);
+  --page-bg-projects: linear-gradient(180deg, #fff7ed 0%, #ffedd5 50%, #fef3c7 100%);
+  --page-bg-skills: linear-gradient(180deg, #fff7ed 0%, #ffedd5 50%, #fef3c7 100%);
+  --page-bg-experience: linear-gradient(180deg, #fff7ed 0%, #ffedd5 50%, #fef3c7 100%);
+  --page-bg-education: linear-gradient(180deg, #fff7ed 0%, #ffedd5 50%, #fef3c7 100%);
+  --page-bg-contact: linear-gradient(180deg, #fff7ed 0%, #ffedd5 50%, #fef3c7 100%);
+  --page-bg-about: linear-gradient(180deg, #fff7ed 0%, #ffedd5 50%, #fef3c7 100%);
 
   /* Transitions */
   --transition-fast: 0.15s ease;
@@ -239,7 +253,6 @@ a:hover {
 .page {
   min-height: 100vh;
   padding-top: 80px;
-  /* default per-page background -- pages can override --page-bg by setting the variable on their root element */
   background: var(--page-bg, var(--light-bg));
   background-repeat: no-repeat;
   background-size: cover;
@@ -250,14 +263,14 @@ a:hover {
    RESPONSIVE TYPOGRAPHY
    ======================================== */
 
-/* Per-page background mappings ⚙️ */
+/* Per-page background mappings */
 .home-page { --page-bg: var(--page-bg-home); }
 .projects-page { --page-bg: var(--page-bg-projects); }
 .skills-page { --page-bg: var(--page-bg-skills); }
 .experience-page { --page-bg: var(--page-bg-experience); }
 .education-page { --page-bg: var(--page-bg-education); }
 .contact-page { --page-bg: var(--page-bg-contact); }
-.about-page { /* subtle neutral tint */ --page-bg: linear-gradient(180deg, rgba(255,255,255,0), rgba(255,255,255,0)); }
+.about-page { --page-bg: var(--page-bg-about); }
 
 @media (max-width: 1024px) {
   h1 {
@@ -381,25 +394,25 @@ a:hover {
 .btn-primary {
   background: var(--gradient-primary);
   color: var(--text-light);
-  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
   border: 2px solid transparent;
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.5);
-  border-color: rgba(59, 130, 246, 0.5);
+  box-shadow: 0 8px 25px rgba(245, 158, 11, 0.5);
+  border-color: rgba(245, 158, 11, 0.5);
 }
 
 .btn-secondary {
-  background: rgba(59, 130, 246, 0.1);
-  color: var(--primary-color);
-  border: 2px solid rgba(59, 130, 246, 0.3);
+  background: rgba(245, 158, 11, 0.1);
+  color: #d97706;
+  border: 2px solid rgba(245, 158, 11, 0.3);
 }
 
 .btn-secondary:hover {
-  background: rgba(59, 130, 246, 0.2);
-  border-color: rgba(59, 130, 246, 0.5);
+  background: rgba(245, 158, 11, 0.2);
+  border-color: rgba(245, 158, 11, 0.5);
   transform: translateY(-2px);
 }
 
@@ -410,7 +423,7 @@ a:hover {
 }
 
 .btn-outline:hover {
-  background: var(--primary-color);
+  background: var(--gradient-primary);
   color: var(--text-light);
   transform: translateY(-2px);
 }
@@ -455,19 +468,21 @@ a:hover {
 }
 
 /* ========================================
-   CARD COMPONENT
+   CARD COMPONENT - ENHANCED
    ======================================== */
 .card {
-  background: var(--light-card);
+  background: var(--card-gradient-1);
+  backdrop-filter: blur(12px);
   border-radius: var(--radius-lg);
-  border: 1px solid var(--light-secondary);
+  border: 1px solid rgba(148, 163, 184, 0.35);
   padding: var(--space-xl);
   transition: all var(--transition-base);
 }
 
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-lg), var(--shadow-glow-purple);
+  border-color: rgba(245, 158, 11, 0.28);
 }
 
 /* ========================================
@@ -537,7 +552,7 @@ a:hover {
 }
 
 /* ========================================
-   ANIMATIONS
+   ANIMATIONS - ENHANCED
    ======================================== */
 @keyframes fadeIn {
   from {
@@ -583,6 +598,28 @@ a:hover {
   100% { transform: scale(1); opacity: 1; }
 }
 
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
 /* Reveal utility with customizable delay */
 .reveal {
   opacity: 0;
@@ -596,7 +633,259 @@ a:hover {
   animation: pop 0.5s cubic-bezier(.22,.9,.35,1) forwards;
 }
 
+/* Float animation for icons */
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
 /* Convenience animation helpers */
 .animate-fade-in { animation: fadeIn 0.6s ease-out; }
 .animate-slide-left { animation: slideInLeft 0.6s ease-out; }
 .animate-slide-right { animation: slideInRight 0.6s ease-out; }
+
+/* Gradient text effect */
+.gradient-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glow effects */
+.glow-primary {
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.4);
+}
+
+.glow-amber {
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.4);
+}
+
+/* ========================================
+   PAGE HEADER STYLES - ENHANCED
+   ======================================== */
+.page-header {
+  text-align: center;
+  margin-bottom: var(--space-3xl);
+  padding: var(--space-2xl) 0;
+}
+
+.page-badge {
+  display: inline-block;
+  background: var(--gradient-primary);
+  color: white;
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius-full);
+  font-weight: var(--font-semibold);
+  font-size: var(--text-sm);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: var(--space-lg);
+  box-shadow: var(--shadow-glow);
+}
+
+.page-title {
+  font-size: var(--text-4xl);
+  font-weight: var(--font-extrabold);
+  margin: var(--space-md) 0;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.page-subtitle {
+  font-size: var(--text-lg);
+  color: var(--text-muted);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    margin-bottom: var(--space-2xl);
+    padding: var(--space-xl) 0;
+  }
+  
+  .page-title {
+    font-size: var(--text-3xl);
+  }
+  
+  .page-subtitle {
+    font-size: var(--text-base);
+  }
+}
+
+/* ========================================
+   TIMELINE STYLES - ENHANCED
+   ======================================== */
+.timeline-card {
+  background: var(--card-gradient-1);
+  border-radius: var(--radius-xl);
+  border: 2px solid rgba(245, 158, 11, 0.15);
+  padding: var(--space-xl);
+  margin-bottom: var(--space-xl);
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.timeline-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--gradient-primary);
+  border-radius: 4px 0 0 4px;
+}
+
+.timeline-card:hover {
+  transform: translateX(5px);
+  box-shadow: var(--shadow-lg), var(--shadow-glow);
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
+.timeline-card.featured {
+  background: var(--card-gradient-2);
+  border-color: rgba(245, 158, 11, 0.2);
+}
+
+.timeline-card.featured::before {
+  background: var(--gradient-accent);
+}
+
+/* ========================================
+   PROGRESS BAR STYLES - ENHANCED
+   ======================================== */
+.skill-bar {
+  background: rgba(245, 158, 11, 0.1);
+  border-radius: var(--radius-full);
+  height: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.skill-progress {
+  background: var(--gradient-primary);
+  border-radius: var(--radius-full);
+  height: 100%;
+  transition: width 1s ease-out;
+  position: relative;
+}
+
+.skill-progress::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  animation: shimmer 2s infinite;
+}
+
+/* ========================================
+   TAG STYLES - ENHANCED
+   ======================================== */
+.tag, .course-tag, .skill-tag {
+  display: inline-block;
+  background: var(--gradient-primary);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  border: none;
+  transition: all var(--transition-base);
+  cursor: default;
+}
+
+.tag:hover, .course-tag:hover, .skill-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+}
+
+/* ========================================
+   SECTION TITLES - ENHANCED
+   ======================================== */
+.section-title {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-extrabold);
+  margin-bottom: var(--space-lg);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-description {
+  font-size: var(--text-lg);
+  color: var(--text-muted);
+  margin-bottom: var(--space-2xl);
+  max-width: 600px;
+}
+
+/* ========================================
+   CTA SECTION STYLES - ENHANCED
+   ======================================== */
+.cta-section {
+  background: var(--gradient-hero);
+  color: white;
+  padding: var(--space-3xl);
+  border-radius: var(--radius-2xl);
+  text-align: center;
+  margin-top: var(--space-3xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  animation: pulse 4s ease-in-out infinite;
+}
+
+.cta-section h2 {
+  color: white;
+  margin-bottom: var(--space-md);
+}
+
+.cta-section p {
+  color: var(--text-muted-light);
+  max-width: 600px;
+  margin: 0 auto var(--space-xl);
+}
+
+.cta-actions {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+/* ========================================
+   RESPONSIVE IMPROVEMENTS
+   ======================================== */
+@media (max-width: 768px) {
+  .timeline-card {
+    padding: var(--space-lg);
+    margin-bottom: var(--space-lg);
+  }
+  
+  .cta-section {
+    padding: var(--space-2xl) var(--space-lg);
+  }
+  
+  .section-title {
+    font-size: var(--text-2xl);
+  }
+}
