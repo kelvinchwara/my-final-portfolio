@@ -195,6 +195,63 @@
   margin-bottom: 3rem;
 }
 
+.document-insights {
+  margin-bottom: 3rem;
+}
+
+.document-insights-header {
+  margin-bottom: 1.25rem;
+}
+
+.section-description {
+  color: #64748b;
+  line-height: 1.7;
+  margin: 0.3rem 0 0;
+  max-width: 760px;
+}
+
+.insight-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.insight-card {
+  background: linear-gradient(145deg, #ffffff, #fffbeb);
+  border: 2px solid rgba(245, 158, 11, 0.16);
+  border-radius: 18px;
+  padding: 1.2rem;
+  box-shadow: 0 10px 24px rgba(245, 158, 11, 0.08);
+}
+
+.insight-icon {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: white;
+  font-size: 1.15rem;
+  margin-bottom: 0.8rem;
+}
+
+.insight-card h3 {
+  margin: 0 0 0.7rem;
+  font-size: 1.02rem;
+  color: var(--text-dark);
+}
+
+.insight-card ul {
+  margin: 0;
+  padding-left: 1rem;
+  color: #64748b;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  line-height: 1.6;
+}
+
 .stat-box {
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.8), rgba(255, 251, 235, 0.6));
   -webkit-backdrop-filter: blur(12px);
@@ -277,7 +334,7 @@
    ======================================== */
 .experience-container {
   display: grid;
-  grid-template-columns: 1fr 0.8fr;
+  grid-template-columns: 1fr;
   gap: 3rem;
   margin-bottom: 4rem;
   padding: 0 0.5rem;
@@ -819,6 +876,21 @@
 }
 
 /* ========================================
+   HIGHLIGHT STRIP UNDER HERO
+   ======================================== */
+.experience-spotlight {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 2rem auto 0;
+  max-width: 1100px;
+}
+
+.spotlight-card {
+  min-height: 100%;
+}
+
+/* ========================================
    SIDEBAR
    ======================================== */
 .experience-sidebar {
@@ -1181,6 +1253,10 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
+
+  .experience-spotlight {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1210,6 +1286,10 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     padding: 0 0.5rem;
+  }
+
+  .insight-grid {
+    grid-template-columns: 1fr;
   }
   
   .stat-box {
@@ -1252,6 +1332,10 @@
   }
   
   .experience-sidebar {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-spotlight {
     grid-template-columns: 1fr;
   }
   

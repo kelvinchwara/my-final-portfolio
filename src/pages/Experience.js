@@ -10,6 +10,36 @@ const Experience = () => {
     { icon: '🤝', number: '50+', label: 'People Trained' },
   ];
 
+  const documentInsights = [
+    {
+      icon: '💻',
+      title: 'Hands-on Development',
+      items: [
+        'Practical exposure to web development and modern application building.',
+        'Strengthened coding confidence through project-based learning and boot camp experience.',
+        'Built familiarity with Python, JavaScript, Django, and web technologies.',
+      ],
+    },
+    {
+      icon: '🔗',
+      title: 'Support & Infrastructure',
+      items: [
+        'Developed experience in networking, systems support, and troubleshooting.',
+        'Handled hardware, software, printer, and peripheral support in real environments.',
+        'Built reliability and service awareness through IT support work.',
+      ],
+    },
+    {
+      icon: '📈',
+      title: 'Professional Growth',
+      items: [
+        'Demonstrated leadership, teamwork, communication, and problem solving.',
+        'Gained confidence through digital entrepreneurship and innovation training.',
+        'Applied digital marketing and online business strategies in practical settings.',
+      ],
+    },
+  ];
+
   const timeline = [
     {
       key: 'ram-hospital',
@@ -98,49 +128,6 @@ const Experience = () => {
       skills: ['Digital Marketing', 'Online Business', 'Networking Basics', 'Social Media Marketing'],
       delay: '0.18s',
     },
-    {
-      key: 'community-volunteer',
-      featured: false,
-      status: null,
-      badge: '2023-2024',
-      role: 'IT Support Volunteer',
-      company: 'Local Community Center',
-      dates: '2023 - 2024 • Community Service',
-      summary:
-        'Provided IT support and digital literacy training to community members, helping bridge the technology gap.',
-      responsibilitiesTitle: null,
-      responsibilities: [],
-      achievementsTitle: 'Impact',
-      achievements: [
-        'Delivered training sessions to 30+ community members',
-        'Configured lab machines and provided network troubleshooting',
-        'Made technology accessible to underserved populations',
-      ],
-      skillsTitle: null,
-      skills: [],
-      delay: '0.24s',
-    },
-    {
-      key: 'peer-tutor',
-      featured: false,
-      status: null,
-      badge: '2019-2020',
-      role: 'Peer Tutor',
-      company: 'Nyasore SDA Secondary School',
-      dates: '2019 - 2020 • Academic',
-      summary:
-        'Tutored computer studies and basic programming, fostering interest in technology among secondary school students.',
-      responsibilitiesTitle: null,
-      responsibilities: [],
-      achievementsTitle: 'Impact',
-      achievements: [
-        'Mentored 20+ students in computer studies and programming fundamentals',
-        'Improved student performance and confidence in technical subjects',
-      ],
-      skillsTitle: null,
-      skills: [],
-      delay: '0.30s',
-    },
   ];
 
   return (
@@ -155,6 +142,63 @@ const Experience = () => {
               Building practical IT skills through internships, industrial attachments, academic projects, and volunteer initiatives—transforming theoretical knowledge into real-world solutions.
             </p>
           </header>
+
+          <section className="experience-spotlight" aria-label="Experience highlights">
+            <div className="sidebar-card spotlight-card" style={{ '--delay': '0.22s' }}>
+              <h3>📊 Experience Summary</h3>
+              <div className="summary-stat">
+                <span className="label">Internships & Attachments:</span>
+                <span className="value">2</span>
+              </div>
+              <div className="summary-stat">
+                <span className="label">Total Experience:</span>
+                <span className="value">2+ Years</span>
+              </div>
+              <div className="summary-stat">
+                <span className="label">Projects Completed:</span>
+                <span className="value">10+</span>
+              </div>
+              <div className="summary-stat">
+                <span className="label">People Trained:</span>
+                <span className="value">50+</span>
+              </div>
+            </div>
+
+            <div className="sidebar-card spotlight-card" style={{ '--delay': '0.28s' }}>
+              <h3>🛠️ Core Skills</h3>
+              <div className="skill-list">
+                <div className="skill">
+                  <div className="skill-name">Networking</div>
+                  <div className="skill-bar"><span style={{width: '85%'}}></span></div>
+                </div>
+                <div className="skill">
+                  <div className="skill-name">System Administration</div>
+                  <div className="skill-bar"><span style={{width: '80%'}}></span></div>
+                </div>
+                <div className="skill">
+                  <div className="skill-name">Web Development</div>
+                  <div className="skill-bar"><span style={{width: '75%'}}></span></div>
+                </div>
+                <div className="skill">
+                  <div className="skill-name">Database Management</div>
+                  <div className="skill-bar"><span style={{width: '70%'}}></span></div>
+                </div>
+                <div className="skill">
+                  <div className="skill-name">Troubleshooting</div>
+                  <div className="skill-bar"><span style={{width: '80%'}}></span></div>
+                </div>
+              </div>
+            </div>
+
+            <div className="sidebar-card spotlight-card cta-card" style={{ '--delay': '0.34s' }}>
+              <h3>💼 Ready for Opportunities</h3>
+              <p>Actively seeking internships and entry-level opportunities to apply and expand my technical skills in professional environments.</p>
+              <div className="cta-buttons">
+                <Link to="/contact" className="btn btn-primary">Contact Me</Link>
+                <Link to="/projects" className="btn btn-secondary">View Projects</Link>
+              </div>
+            </div>
+          </section>
         </div>
       </section>
 
@@ -173,6 +217,29 @@ const Experience = () => {
             </div>
           ))}
         </div>
+
+        <section className="document-insights">
+          <div className="document-insights-header">
+            <h2 className="section-title">What the attached documents highlight</h2>
+            <p className="section-description">
+              The portfolio certificates and recommendation letter reinforce my practical strengths in development, support, entrepreneurship, and teamwork.
+            </p>
+          </div>
+
+          <div className="insight-grid">
+            {documentInsights.map((item) => (
+              <article className="insight-card" key={item.title}>
+                <div className="insight-icon">{item.icon}</div>
+                <h3>{item.title}</h3>
+                <ul>
+                  {item.items.map((entry) => (
+                    <li key={entry}>{entry}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+        </section>
 
         {/* Main Content */}
         <div className="experience-container">
@@ -262,62 +329,6 @@ const Experience = () => {
             ))}
           </main>
 
-          <aside className="experience-sidebar">
-            <div className="sidebar-card" style={{ '--delay': '0.22s' }}>
-              <h3>📊 Experience Summary</h3>
-              <div className="summary-stat">
-                <span className="label">Internships & Attachments:</span>
-                <span className="value">2</span>
-              </div>
-              <div className="summary-stat">
-                <span className="label">Total Experience:</span>
-                <span className="value">2+ Years</span>
-              </div>
-              <div className="summary-stat">
-                <span className="label">Projects Completed:</span>
-                <span className="value">10+</span>
-              </div>
-              <div className="summary-stat">
-                <span className="label">People Trained:</span>
-                <span className="value">50+</span>
-              </div>
-            </div>
-
-            <div className="sidebar-card" style={{ '--delay': '0.28s' }}>
-              <h3>🛠️ Core Skills</h3>
-              <div className="skill-list">
-                <div className="skill">
-                  <div className="skill-name">Networking</div>
-                  <div className="skill-bar"><span style={{width: '85%'}}></span></div>
-                </div>
-                <div className="skill">
-                  <div className="skill-name">System Administration</div>
-                  <div className="skill-bar"><span style={{width: '80%'}}></span></div>
-                </div>
-                <div className="skill">
-                  <div className="skill-name">Web Development</div>
-                  <div className="skill-bar"><span style={{width: '75%'}}></span></div>
-                </div>
-                <div className="skill">
-                  <div className="skill-name">Database Management</div>
-                  <div className="skill-bar"><span style={{width: '70%'}}></span></div>
-                </div>
-                <div className="skill">
-                  <div className="skill-name">Troubleshooting</div>
-                  <div className="skill-bar"><span style={{width: '80%'}}></span></div>
-                </div>
-              </div>
-            </div>
-
-            <div className="sidebar-card cta-card" style={{ '--delay': '0.34s' }}>
-              <h3>💼 Ready for Opportunities</h3>
-              <p>Actively seeking internships and entry-level opportunities to apply and expand my technical skills in professional environments.</p>
-              <div className="cta-buttons">
-                <Link to="/contact" className="btn btn-primary">Contact Me</Link>
-                <Link to="/projects" className="btn btn-secondary">View Projects</Link>
-              </div>
-            </div>
-          </aside>
         </div>
 
         {/* Projects Showcase */}
@@ -364,23 +375,6 @@ const Experience = () => {
               </div>
             </article>
 
-            <article className="project-card">
-              <div className="project-header">
-                <h3>🤝 Community & Volunteer Projects</h3>
-                <span className="project-tag">Community Service</span>
-              </div>
-              <p className="project-source">Community-Based Initiatives (2019 - 2024)</p>
-              <ul className="project-list">
-                <li><strong>Digital Literacy Program:</strong> Trained 30+ community members in basic IT and computer skills</li>
-                <li><strong>Lab Setup & Maintenance:</strong> Configured and maintained computer labs for educational use</li>
-                <li><strong>Peer Mentoring:</strong> Guided 20+ secondary school students in computer studies and programming</li>
-              </ul>
-              <div className="project-tech">
-                <span className="tech-tag">Community Engagement</span>
-                <span className="tech-tag">Training</span>
-                <span className="tech-tag">Mentoring</span>
-              </div>
-            </article>
           </div>
         </section>
 
