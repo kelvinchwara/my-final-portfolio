@@ -73,7 +73,7 @@ const Home = () => {
                     <h3>Kelvin Chwara</h3>
                     <p className="profile-degree">BSc. Information Technology</p>
                     <p className="profile-university">Kisii University</p>
-                    <p className="profile-expected">Awaiting for Dec 2026 Graduation</p>
+                    <p className="profile-expected"></p>
                   </div>
                   <div className="profile-actions">
                     <a href="/KELVIN%20CHWARA.pdf" download className="btn btn-secondary btn-sm">

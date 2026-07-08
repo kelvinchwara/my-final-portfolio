@@ -50,7 +50,7 @@ const Skills = () => {
       skills: ['Digital Skills', 'Entrepreneurship', 'Innovation', 'Business Growth'],
     },
     {
-      title: 'Boot Camp Certificate',
+      title: 'Emobilis Technology Training Institute',
       type: 'Intensive Program',
       description:
         'Strengthened hands-on coding ability through real-world practice, collaborative development and rapid knowledge building.',
