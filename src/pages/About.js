@@ -16,10 +16,7 @@ const About = () => {
           <div className="about-main">
             <div className="about-intro">
               <p>
-                A passionate IT student with a strong foundation in networking, 
-                web development, and research. Currently pursuing my Bachelor's 
-                degree while gaining practical experience through various projects 
-                and workshops.
+                BSc. Information Technology Graduate Candidate with expertise in networking, web development, and data-driven research. Passionate about leveraging hands-on project experience to build secure, scalable, and innovative tech solutions.
               </p>
             </div>
 

@@ -23,10 +23,10 @@ const Home = () => {
                 </h1>
                 
                 <p className="hero-description">
-                  BSc. Information Technology student at Kisii University with expertise in 
-                  web development, networking, and system administration. Passionate about 
-                  building innovative solutions and continuous learning.
-                </p>
+  BSc. Information Technology (Graduand) from Kisii University. Specialized in 
+  web development, network engineering, and system administration, dedicated to 
+  building efficient, high-performance technological solutions.
+</p>
                 
                 <div className="hero-cta-group">
                   <Link to="/contact" className="btn btn-primary btn-lg">
